@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03A1DE621B561137002A0993 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE611B561137002A0993 /* main.m */; };
+		03A1DE651B561137002A0993 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE641B561137002A0993 /* AppDelegate.m */; };
+		03A1DE681B561137002A0993 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE671B561137002A0993 /* ViewController.m */; };
+		03A1DE6B1B561137002A0993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE691B561137002A0993 /* Main.storyboard */; };
+		03A1DE6D1B561137002A0993 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE6C1B561137002A0993 /* Images.xcassets */; };
+		03A1DE701B561137002A0993 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE6E1B561137002A0993 /* LaunchScreen.xib */; };
+		03A1DE7C1B561137002A0993 /* ADViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */; };
+		19188FA01D3E8DE109F52677 /* libPods-ADViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0CD2A4121DC33FF9A2CD5F /* libPods-ADViewDemo.a */; };
+		22AB90481DC0A0A2007A8655 /* DesktopADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AB90471DC0A0A2007A8655 /* DesktopADView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03A1DE761B561137002A0993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03A1DE541B561137002A0993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A1DE5B1B561137002A0993;
+			remoteInfo = ADViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03A1DE5C1B561137002A0993 /* ADViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A1DE601B561137002A0993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A1DE611B561137002A0993 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03A1DE631B561137002A0993 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		03A1DE641B561137002A0993 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03A1DE661B561137002A0993 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		03A1DE671B561137002A0993 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		03A1DE6A1B561137002A0993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03A1DE6C1B561137002A0993 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		03A1DE6F1B561137002A0993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		03A1DE751B561137002A0993 /* ADViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A1DE7A1B561137002A0993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewDemoTests.m; sourceTree = "<group>"; };
+		22AB90461DC0A0A2007A8655 /* DesktopADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopADView.h; sourceTree = "<group>"; };
+		22AB90471DC0A0A2007A8655 /* DesktopADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopADView.m; sourceTree = "<group>"; };
+		8F0CD2A4121DC33FF9A2CD5F /* libPods-ADViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ADViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBFEFF97CF40896B1670B404 /* Pods-ADViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADViewDemo/Pods-ADViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C05DD717862463480FAF1468 /* Pods-ADViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADViewDemo/Pods-ADViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03A1DE591B561137002A0993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19188FA01D3E8DE109F52677 /* libPods-ADViewDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A1DE721B561137002A0993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03A1DE531B561137002A0993 = {
+			isa = PBXGroup;
+			children = (
+				03A1DE5E1B561137002A0993 /* ADViewDemo */,
+				03A1DE781B561137002A0993 /* ADViewDemoTests */,
+				03A1DE5D1B561137002A0993 /* Products */,
+				3D5D957C870AF2E57CBB37B4 /* Pods */,
+				9F1D53B5A883A788E12D92C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		03A1DE5D1B561137002A0993 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03A1DE5C1B561137002A0993 /* ADViewDemo.app */,
+				03A1DE751B561137002A0993 /* ADViewDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03A1DE5E1B561137002A0993 /* ADViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				22AB90451DC0A0A2007A8655 /* DesktopADView */,
+				03A1DE631B561137002A0993 /* AppDelegate.h */,
+				03A1DE641B561137002A0993 /* AppDelegate.m */,
+				03A1DE661B561137002A0993 /* ViewController.h */,
+				03A1DE671B561137002A0993 /* ViewController.m */,
+				03A1DE691B561137002A0993 /* Main.storyboard */,
+				03A1DE6C1B561137002A0993 /* Images.xcassets */,
+				03A1DE6E1B561137002A0993 /* LaunchScreen.xib */,
+				03A1DE5F1B561137002A0993 /* Supporting Files */,
+			);
+			path = ADViewDemo;
+			sourceTree = "<group>";
+		};
+		03A1DE5F1B561137002A0993 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03A1DE601B561137002A0993 /* Info.plist */,
+				03A1DE611B561137002A0993 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03A1DE781B561137002A0993 /* ADViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */,
+				03A1DE791B561137002A0993 /* Supporting Files */,
+			);
+			path = ADViewDemoTests;
+			sourceTree = "<group>";
+		};
+		03A1DE791B561137002A0993 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03A1DE7A1B561137002A0993 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22AB90451DC0A0A2007A8655 /* DesktopADView */ = {
+			isa = PBXGroup;
+			children = (
+				22AB90461DC0A0A2007A8655 /* DesktopADView.h */,
+				22AB90471DC0A0A2007A8655 /* DesktopADView.m */,
+			);
+			name = DesktopADView;
+			path = ../../DesktopADView;
+			sourceTree = "<group>";
+		};
+		3D5D957C870AF2E57CBB37B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBFEFF97CF40896B1670B404 /* Pods-ADViewDemo.debug.xcconfig */,
+				C05DD717862463480FAF1468 /* Pods-ADViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F1D53B5A883A788E12D92C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F0CD2A4121DC33FF9A2CD5F /* libPods-ADViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03A1DE5B1B561137002A0993 /* ADViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A1DE7F1B561137002A0993 /* Build configuration list for PBXNativeTarget "ADViewDemo" */;
+			buildPhases = (
+				510B95F927BA7052B1E8624D /* [CP] Check Pods Manifest.lock */,
+				03A1DE581B561137002A0993 /* Sources */,
+				03A1DE591B561137002A0993 /* Frameworks */,
+				03A1DE5A1B561137002A0993 /* Resources */,
+				D08217E0096B0DBB565D4365 /* [CP] Embed Pods Frameworks */,
+				C61C8F6AAEC7CBDEED7FBAE0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADViewDemo;
+			productName = ADViewDemo;
+			productReference = 03A1DE5C1B561137002A0993 /* ADViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03A1DE741B561137002A0993 /* ADViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A1DE821B561137002A0993 /* Build configuration list for PBXNativeTarget "ADViewDemoTests" */;
+			buildPhases = (
+				03A1DE711B561137002A0993 /* Sources */,
+				03A1DE721B561137002A0993 /* Frameworks */,
+				03A1DE731B561137002A0993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03A1DE771B561137002A0993 /* PBXTargetDependency */,
+			);
+			name = ADViewDemoTests;
+			productName = ADViewDemoTests;
+			productReference = 03A1DE751B561137002A0993 /* ADViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03A1DE541B561137002A0993 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = ISNC;
+				TargetAttributes = {
+					03A1DE5B1B561137002A0993 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = TGZ32BA6KS;
+					};
+					03A1DE741B561137002A0993 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 03A1DE5B1B561137002A0993;
+					};
+				};
+			};
+			buildConfigurationList = 03A1DE571B561137002A0993 /* Build configuration list for PBXProject "ADViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03A1DE531B561137002A0993;
+			productRefGroup = 03A1DE5D1B561137002A0993 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03A1DE5B1B561137002A0993 /* ADViewDemo */,
+				03A1DE741B561137002A0993 /* ADViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03A1DE5A1B561137002A0993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A1DE6B1B561137002A0993 /* Main.storyboard in Resources */,
+				03A1DE701B561137002A0993 /* LaunchScreen.xib in Resources */,
+				03A1DE6D1B561137002A0993 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A1DE731B561137002A0993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		510B95F927BA7052B1E8624D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C61C8F6AAEC7CBDEED7FBAE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADViewDemo/Pods-ADViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D08217E0096B0DBB565D4365 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ADViewDemo/Pods-ADViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03A1DE581B561137002A0993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22AB90481DC0A0A2007A8655 /* DesktopADView.m in Sources */,
+				03A1DE681B561137002A0993 /* ViewController.m in Sources */,
+				03A1DE651B561137002A0993 /* AppDelegate.m in Sources */,
+				03A1DE621B561137002A0993 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A1DE711B561137002A0993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A1DE7C1B561137002A0993 /* ADViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03A1DE771B561137002A0993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03A1DE5B1B561137002A0993 /* ADViewDemo */;
+			targetProxy = 03A1DE761B561137002A0993 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03A1DE691B561137002A0993 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03A1DE6A1B561137002A0993 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03A1DE6E1B561137002A0993 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03A1DE6F1B561137002A0993 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03A1DE7D1B561137002A0993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03A1DE7E1B561137002A0993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03A1DE801B561137002A0993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBFEFF97CF40896B1670B404 /* Pods-ADViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TGZ32BA6KS;
+				INFOPLIST_FILE = ADViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isnc.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03A1DE811B561137002A0993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05DD717862463480FAF1468 /* Pods-ADViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TGZ32BA6KS;
+				INFOPLIST_FILE = ADViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isnc.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03A1DE831B561137002A0993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ADViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isnc.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADViewDemo.app/ADViewDemo";
+			};
+			name = Debug;
+		};
+		03A1DE841B561137002A0993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ADViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isnc.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADViewDemo.app/ADViewDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03A1DE571B561137002A0993 /* Build configuration list for PBXProject "ADViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A1DE7D1B561137002A0993 /* Debug */,
+				03A1DE7E1B561137002A0993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A1DE7F1B561137002A0993 /* Build configuration list for PBXNativeTarget "ADViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A1DE801B561137002A0993 /* Debug */,
+				03A1DE811B561137002A0993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A1DE821B561137002A0993 /* Build configuration list for PBXNativeTarget "ADViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A1DE831B561137002A0993 /* Debug */,
+				03A1DE841B561137002A0993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03A1DE541B561137002A0993 /* Project object */;
+}

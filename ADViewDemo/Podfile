@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, "8.0"
+
+target:ADViewDemo  do
+  
+pod 'SDCycleScrollView','~>1.65'
+
+  
+
+
+end
+
+ 
