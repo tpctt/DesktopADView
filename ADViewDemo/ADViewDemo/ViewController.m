@@ -28,6 +28,8 @@
     adView.widthToSuperView = 3/5.0;
     adView.anchorPointOffset = CGPointMake(20, 30);
     
+    adView.showDelBtn = YES;
+    
     ///删除按钮的大小.位置
 //    adView.delIconWidth = 50;
 //    adView.delIconDelt = 30;

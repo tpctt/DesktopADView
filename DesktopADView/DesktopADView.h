@@ -31,6 +31,8 @@ IB_DESIGNABLE
 ///非自定义 adview 的点击动作 block
 @property ( copy,nonatomic) void (^tapAdviewBlock)(NSInteger index) ;
 
+///是否显示删除按钮
+@property ( assign,nonatomic) IBInspectable BOOL showDelBtn;
 
 
 ///显示的 view,image 作为 ad 为默认的 imageview 时使用,其他自定义的adview 按照对应的设置

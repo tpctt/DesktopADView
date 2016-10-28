@@ -25,6 +25,7 @@
 
 -(void)commonInit
 {
+    self.showDelBtn = YES;
     
 //    self.anchorPointOffset = CGPointMake(11, 22);
     self.widthToSuperView = 0.64;
@@ -439,7 +440,12 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    [self drawSuperid_ad_close];
+    
+    if( self.showDelBtn){
+        [self drawSuperid_ad_close];
+        
+    }
+    
     
 }
 
@@ -452,9 +458,16 @@
     
     CGRect frame = CGRectMake(CGRectGetMaxX(self.adView.frame) - w, CGRectGetMinY(self.adView.frame) - w - deltTop, w,  w + deltTop);
     
-    
-    CAShapeLayer *lineLayer2 = [ CAShapeLayer layer ];
-    _lineLayer2 = lineLayer2;
+    CAShapeLayer *lineLayer2;
+    if(_lineLayer2){
+        lineLayer2 = _lineLayer2;
+        
+    }else{
+        
+        lineLayer2 = [ CAShapeLayer layer ];
+        _lineLayer2 = lineLayer2;
+        
+    }
     
     lineLayer2. frame = frame;
     
