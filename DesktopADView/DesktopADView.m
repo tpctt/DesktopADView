@@ -156,16 +156,23 @@
         
         
         
-        
-        
-        NSLayoutConstraint *wC =
-        [NSLayoutConstraint constraintWithItem:subview
-                                     attribute:NSLayoutAttributeWidth
-                                     relatedBy:NSLayoutRelationEqual
-                                        toItem:supview
-                                     attribute:NSLayoutAttributeWidth
-                                    multiplier:self.widthToSuperView
-                                      constant:0];
+        if(self.widthToSuperView != 0 ){
+            NSLayoutConstraint *wC =
+            [NSLayoutConstraint constraintWithItem:subview
+                                         attribute:NSLayoutAttributeWidth
+                                         relatedBy:NSLayoutRelationEqual
+                                            toItem:supview
+                                         attribute:NSLayoutAttributeWidth
+                                        multiplier:self.widthToSuperView
+                                          constant:0];
+            
+            wC.active = YES;
+            ///约束
+            [supview addConstraints:@[ wC ]];
+
+        }else{
+            //不约束
+        }
         
         
         
@@ -186,38 +193,41 @@
                                     multiplier:1
                                       constant:self.anchorPointOffset.y];
         
-        wC.active = YES;
         centerXC.active = YES;
         centerYC.active = YES;
         
         ///约束
-        [supview addConstraints:@[ wC,centerXC,centerYC ]];
-        
+        [supview addConstraints:@[ centerXC,centerYC ]];
         
         
         
         
         ///
+        if(self.adRatio != 0 ){
+            
+            NSLayoutConstraint *hC;
+             hC =
+            [NSLayoutConstraint constraintWithItem:subview
+                                         attribute:NSLayoutAttributeHeight
+                                         relatedBy:NSLayoutRelationEqual
+                                            toItem:subview
+                                         attribute:NSLayoutAttributeWidth
+                                        multiplier:self.adRatio
+                                          constant:0];
+            hC.active = YES;
+
+            ///约束
+            [subview addConstraints:@[ hC ]];
+            
+        }else{
+            //不约束
+        }
         
-        NSLayoutConstraint *hC =
-        [NSLayoutConstraint constraintWithItem:subview
-                                     attribute:NSLayoutAttributeHeight
-                                     relatedBy:NSLayoutRelationEqual
-                                        toItem:subview
-                                     attribute:NSLayoutAttributeWidth
-                                    multiplier:self.adRatio
-                                      constant:0];
         
-        
-        
-        
-        hC.active = YES;
-        
-        ///约束
-        [subview addConstraints:@[ hC ]];
         
         
     }
+    
 }
 -(void)setAdView:(UIView *)adView
 {
@@ -227,10 +237,14 @@
     
     _adView = adView;
  
+    if(self.superview ){
 
-    [self updateADView ];
+        [self updateADView ];
+        
+    }
     
-    
+    [self addTapGestureForMask];
+
 }
 -(void)addConstruction:(UIView*)view  image: (UIImage *)image
 {
@@ -271,7 +285,10 @@
 
 -(void)tapOnMaskView:(UITapGestureRecognizer *)sender
 {
-    
+    if (self.tapAdviewBlock) {
+        self.tapAdviewBlock(NO , 0);
+        
+    }
     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
         
         [self removeFromSuperview];
@@ -288,10 +305,10 @@
 {
     if(self.tapGesture == nil){
         self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnMaskView:) ];
-        self.tapGesture.delegate = self;
 
     }
-  
+    self.tapGesture.delegate = self;
+
     [self.maskView addGestureRecognizer:self.tapGesture];
 
     
@@ -301,7 +318,7 @@
     UIView *view = touch.view;
     if (view != self.maskView) {
         if (self.tapAdviewBlock) {
-            self.tapAdviewBlock(0);
+            self.tapAdviewBlock(YES , 0);
             
         }
         return NO;

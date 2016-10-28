@@ -14,9 +14,9 @@ IB_DESIGNABLE
 
 ///广告的锚点的anchorPointOffset
 @property (assign,nonatomic) IBInspectable CGPoint anchorPointOffset;
-///广告的宽度比例
+///广告的宽度比例,=0 表示不约束,直接使用adview 的宽度
 @property (assign,nonatomic) IBInspectable CGFloat widthToSuperView;
-///广告的高宽比
+///广告的高宽比 ,=0 表示不约束,直接使用adview 的高度
 @property (assign,nonatomic) IBInspectable CGFloat adRatio;
 ///删除按钮的大小
 @property (assign,nonatomic) IBInspectable CGFloat delIconWidth;
@@ -29,7 +29,7 @@ IB_DESIGNABLE
 ///mask
 @property ( strong,nonatomic) UIView *maskView;
 ///非自定义 adview 的点击动作 block
-@property ( copy,nonatomic) void (^tapAdviewBlock)(NSInteger index) ;
+@property ( copy,nonatomic) void (^tapAdviewBlock)( bool tapAdview ,NSInteger index) ;
 
 ///是否显示删除按钮
 @property ( assign,nonatomic) IBInspectable BOOL showDelBtn;
