@@ -6,6 +6,9 @@ An advertisement View for developers that cooperated with SuperID.
 ![image](img/AD_Img.png)
 ![image](img/AD_Img2.png)
 
+```
+pod 'DesktopADView'
+
 ## Usage
 There is a demo project included that shows how to use the SID-AD-View.
 
