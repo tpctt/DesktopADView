@@ -1,5 +1,8 @@
 DesktopADView
 ==============
+仿滴滴/Uber 的启动之后再控制器上面弹出多个广告,带删除按钮的动画绘制.广告显示部分 是解耦合的,可以完全自定义
+显示的广告的大小 可以安装原始的比例显示 或者设置比例
+
 some fork from SID-AD-View-iOS and modify projects
 An advertisement View for developers that cooperated with SuperID. 
 
@@ -34,5 +37,4 @@ adView.adView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero imageName
 ##Give Feedback
 
 **Contact:**  491590253@qq.com
-
 
