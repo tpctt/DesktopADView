@@ -286,7 +286,11 @@
 -(void)tapOnMaskView:(UITapGestureRecognizer *)sender
 {
     if (self.tapAdviewBlock) {
-        self.tapAdviewBlock(NO , 0);
+        BOOL flag = self.tapAdviewBlock(NO , 0);
+        if(flag == NO){
+            return;
+        }
+            
         
     }
     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionTransitionCurlUp animations:^{

@@ -42,9 +42,12 @@
     [adView showInView:self.view  image:[UIImage imageNamed:@"adImage"]];
     
     
-    adView.tapAdviewBlock = ^(NSInteger index){
+    adView.tapAdviewBlock = ^BOOL(bool tapAdview ,NSInteger index){
     
+        
         NSLog(@"tap at :%d",index);
+        
+        return NO;
         
     };
     

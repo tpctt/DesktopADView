@@ -28,8 +28,8 @@ IB_DESIGNABLE
 @property ( strong,nonatomic) UIView *adView;
 ///mask
 @property ( strong,nonatomic) UIView *maskView;
-///非自定义 adview 的点击动作 block
-@property ( copy,nonatomic) void (^tapAdviewBlock)( bool tapAdview ,NSInteger index) ;
+///非自定义 adview 的点击动作 block,返回值表示是否从 superview 移除
+@property ( copy,nonatomic) BOOL (^tapAdviewBlock)( bool tapAdview ,NSInteger index) ;
 
 ///是否显示删除按钮
 @property ( assign,nonatomic) IBInspectable BOOL showDelBtn;
