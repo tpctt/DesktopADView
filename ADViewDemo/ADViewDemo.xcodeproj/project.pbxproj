@@ -15,10 +15,10 @@
 		03A1DE701B561137002A0993 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE6E1B561137002A0993 /* LaunchScreen.xib */; };
 		03A1DE7C1B561137002A0993 /* ADViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */; };
 		19188FA01D3E8DE109F52677 /* libPods-ADViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0CD2A4121DC33FF9A2CD5F /* libPods-ADViewDemo.a */; };
-		222A6FC41EEFC9270082A05B /* DesktopADView.h in Headers */ = {isa = PBXBuildFile; fileRef = 222A6FC21EEFC9270082A05B /* DesktopADView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		222A6FC41EEFC9270082A05B /* DesktopADViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 222A6FC21EEFC9270082A05B /* DesktopADViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		222A6FC71EEFC9270082A05B /* DesktopADView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222A6FC01EEFC9270082A05B /* DesktopADView.framework */; };
 		222A6FC81EEFC9270082A05B /* DesktopADView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 222A6FC01EEFC9270082A05B /* DesktopADView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		222A6FCD1EEFC9430082A05B /* DesktopADView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AB90461DC0A0A2007A8655 /* DesktopADView.h */; };
+		222A6FCD1EEFC9430082A05B /* DesktopADView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AB90461DC0A0A2007A8655 /* DesktopADView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		222A6FCE1EEFC9450082A05B /* DesktopADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AB90471DC0A0A2007A8655 /* DesktopADView.m */; };
 		22AB90481DC0A0A2007A8655 /* DesktopADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AB90471DC0A0A2007A8655 /* DesktopADView.m */; };
 /* End PBXBuildFile section */
@@ -69,7 +69,7 @@
 		03A1DE7A1B561137002A0993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADViewDemoTests.m; sourceTree = "<group>"; };
 		222A6FC01EEFC9270082A05B /* DesktopADView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesktopADView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		222A6FC21EEFC9270082A05B /* DesktopADView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesktopADView.h; sourceTree = "<group>"; };
+		222A6FC21EEFC9270082A05B /* DesktopADViewFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesktopADViewFramework.h; sourceTree = "<group>"; };
 		222A6FC31EEFC9270082A05B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22AB90461DC0A0A2007A8655 /* DesktopADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopADView.h; sourceTree = "<group>"; };
 		22AB90471DC0A0A2007A8655 /* DesktopADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopADView.m; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		222A6FC11EEFC9270082A05B /* DesktopADView */ = {
 			isa = PBXGroup;
 			children = (
-				222A6FC21EEFC9270082A05B /* DesktopADView.h */,
+				222A6FC21EEFC9270082A05B /* DesktopADViewFramework.h */,
 				222A6FC31EEFC9270082A05B /* Info.plist */,
 			);
 			path = DesktopADView;
@@ -212,7 +212,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222A6FC41EEFC9270082A05B /* DesktopADView.h in Headers */,
+				222A6FC41EEFC9270082A05B /* DesktopADViewFramework.h in Headers */,
 				222A6FCD1EEFC9430082A05B /* DesktopADView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,6 +697,7 @@
 				222A6FCA1EEFC9270082A05B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
