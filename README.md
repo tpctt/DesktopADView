@@ -40,3 +40,9 @@ adView.adView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero imageName
 
 **Contact:**  491590253@qq.com
 
+
+///TODO 
+1. 自定义 xx 的位置和方向
+2. 支持 xx 的图片显示
+3. 优化 ad 的宽高比例的使用方法
+
