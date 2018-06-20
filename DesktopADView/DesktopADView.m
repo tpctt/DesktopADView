@@ -337,7 +337,11 @@
 
 -(void)addCloseBtnWithAnimation
 {
-    [self drawSuperid_ad_close];
+    if( self.showDelBtn){
+        [self drawSuperid_ad_close];
+        
+    }
+    
 }
 
 - (void)showInView:(UIView *)view image: (UIImage *)image
