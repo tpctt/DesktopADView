@@ -14,13 +14,12 @@
 		03A1DE6D1B561137002A0993 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE6C1B561137002A0993 /* Images.xcassets */; };
 		03A1DE701B561137002A0993 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A1DE6E1B561137002A0993 /* LaunchScreen.xib */; };
 		03A1DE7C1B561137002A0993 /* ADViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A1DE7B1B561137002A0993 /* ADViewDemoTests.m */; };
-		19188FA01D3E8DE109F52677 /* libPods-ADViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0CD2A4121DC33FF9A2CD5F /* libPods-ADViewDemo.a */; };
 		222A6FC41EEFC9270082A05B /* DesktopADViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 222A6FC21EEFC9270082A05B /* DesktopADViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		222A6FC71EEFC9270082A05B /* DesktopADView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222A6FC01EEFC9270082A05B /* DesktopADView.framework */; };
 		222A6FC81EEFC9270082A05B /* DesktopADView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 222A6FC01EEFC9270082A05B /* DesktopADView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		222A6FCD1EEFC9430082A05B /* DesktopADView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AB90461DC0A0A2007A8655 /* DesktopADView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		222A6FCE1EEFC9450082A05B /* DesktopADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AB90471DC0A0A2007A8655 /* DesktopADView.m */; };
 		22AB90481DC0A0A2007A8655 /* DesktopADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AB90471DC0A0A2007A8655 /* DesktopADView.m */; };
+		22CCC1DC23C9B54E00A3A3BF /* DesktopADView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AB90461DC0A0A2007A8655 /* DesktopADView.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19188FA01D3E8DE109F52677 /* libPods-ADViewDemo.a in Frameworks */,
 				222A6FC71EEFC9270082A05B /* DesktopADView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222A6FC41EEFC9270082A05B /* DesktopADViewFramework.h in Headers */,
-				222A6FCD1EEFC9430082A05B /* DesktopADView.h in Headers */,
+				22CCC1DC23C9B54E00A3A3BF /* DesktopADView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +287,7 @@
 				TargetAttributes = {
 					03A1DE5B1B561137002A0993 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = TGZ32BA6KS;
+						DevelopmentTeam = 5SW7F4537G;
 					};
 					03A1DE741B561137002A0993 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -307,6 +305,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -550,7 +549,7 @@
 			baseConfigurationReference = BBFEFF97CF40896B1670B404 /* Pods-ADViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TGZ32BA6KS;
+				DEVELOPMENT_TEAM = 5SW7F4537G;
 				INFOPLIST_FILE = ADViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.isnc.$(PRODUCT_NAME:rfc1034identifier)";
@@ -563,7 +562,7 @@
 			baseConfigurationReference = C05DD717862463480FAF1468 /* Pods-ADViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TGZ32BA6KS;
+				DEVELOPMENT_TEAM = 5SW7F4537G;
 				INFOPLIST_FILE = ADViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.isnc.$(PRODUCT_NAME:rfc1034identifier)";

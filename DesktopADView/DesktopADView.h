@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
+///查看产品详情来源
+typedef NS_ENUM(NSUInteger, DesktopADViewDelLocType ){
+    DesktopADViewDelLocType_TopRight = 0,
+    DesktopADViewDelLocType_BottomCenter ,
+
+    
+};
+
 IB_DESIGNABLE
 @interface DesktopADView : UIView
 
@@ -30,9 +38,11 @@ IB_DESIGNABLE
 @property ( strong,nonatomic) UIView *maskView;
 ///非自定义 adview 的点击动作 block,返回值表示是否从 superview 移除
 @property ( copy,nonatomic) BOOL (^tapAdviewBlock)( bool tapAdview ,NSInteger index) ;
+@property ( copy,nonatomic) BOOL (^tapCloseBlock)( bool tapAdview ,NSInteger index) ;
 
 ///是否显示删除按钮
 @property ( assign,nonatomic) IBInspectable BOOL showDelBtn;
+@property ( assign,nonatomic) IBInspectable DesktopADViewDelLocType showDelLocType;
 
 
 ///显示的 view,image 作为 ad 为默认的 imageview 时使用,其他自定义的adview 按照对应的设置

@@ -27,9 +27,12 @@
     adView.adRatio = 5/3.0;
     adView.widthToSuperView = 3/5.0;
     adView.anchorPointOffset = CGPointMake(20, 30);
-    
+    adView.delIconWidth =  50 ;
+    adView.delIconDelt =  50 ;
+
     adView.showDelBtn = YES;
-    
+    adView.showDelLocType = DesktopADViewDelLocType_TopRight;
+
     ///删除按钮的大小.位置
 //    adView.delIconWidth = 50;
 //    adView.delIconDelt = 30;
@@ -43,13 +46,22 @@
     
     
     adView.tapAdviewBlock = ^BOOL(bool tapAdview ,NSInteger index){
-    
         
-        NSLog(@"tap at :%d",index);
+        NSLog(@"tap at :%ld",index);
         
         return NO;
         
     };
+    
+    adView.tapCloseBlock = ^BOOL(bool tapAdview ,NSInteger index){
+       
+        NSLog(@"tap close");
+           
+        return NO;
+           
+    };
+    
+    
     
     
 }

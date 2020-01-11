@@ -16,7 +16,10 @@
 @interface DesktopADView()<UIGestureRecognizerDelegate>
 
 @property(strong,nonatomic) UITapGestureRecognizer        *tapGesture;
+@property(strong,nonatomic) UITapGestureRecognizer        *tapCloseGesture;
 @property(strong,nonatomic) CAShapeLayer *lineLayer2 ;
+@property(assign,nonatomic) CGRect deltAreaFrame ;
+@property(strong,nonatomic) UIView *deltArea ;
 
 
 @end
@@ -70,7 +73,15 @@
     [self commonInit];
 
 }
-
+-(UIView *)deltArea
+{
+    if(_deltArea == nil){
+        _deltArea = [[UIView alloc] init];
+        _deltArea.backgroundColor = [UIColor clearColor];
+        [self addSubview:_deltArea];
+    }
+    return _deltArea;
+}
 
 -(void)addConstraintTo:(UIView *)superView for:(UIView  *)subview edge:(UIEdgeInsets)edge
 {
@@ -290,44 +301,67 @@
         if(flag == NO){
             return;
         }
-            
-        
     }
+    
     [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
-        
         [self removeFromSuperview];
-        
     } completion:^(BOOL finished) {
-        
         [self removeFromSuperview];
-        
     }];
     
 }
-
+-(void)tapOnCloseView:(UITapGestureRecognizer *)sender
+{
+    if (self.tapCloseBlock) {
+        BOOL flag = self.tapCloseBlock(NO , 0);
+        if(flag == NO){
+            return;
+        }
+    }
+    
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionTransitionCurlUp animations:^{
+        [self removeFromSuperview];
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+    
+}
 -(void)addTapGestureForMask
 {
-    if(self.tapGesture == nil){
-        self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnMaskView:) ];
+    {
+        if(self.tapGesture == nil){
+            self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnMaskView:) ];
+        }
+        self.tapGesture.delegate = self;
+        [self.maskView addGestureRecognizer:self.tapGesture];
 
     }
-    self.tapGesture.delegate = self;
+    
+    {
+        if(self.tapCloseGesture == nil){
+            self.tapCloseGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnCloseView:) ];
+        }
+        self.tapCloseGesture.delegate = self;
+        [self.deltArea addGestureRecognizer:self.tapCloseGesture];
 
-    [self.maskView addGestureRecognizer:self.tapGesture];
-
+    }
     
 }
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     
-    UIView *view = touch.view;
-    if (view != self.maskView) {
-        if (self.tapAdviewBlock) {
-            self.tapAdviewBlock(YES , 0);
-            
-        }
-        return NO;
-    }else{
-        
+    if (gestureRecognizer == self.tapGesture) {
+         UIView *view = touch.view;
+         
+         if (view != self.maskView) {
+             if (self.tapAdviewBlock) {
+                 self.tapAdviewBlock(YES , 0);
+                 
+             }
+             return NO;
+         }else{
+             
+         }
+         
     }
     
     return YES;
@@ -349,7 +383,8 @@
     [self addConstruction:view image:image];
     
     [self addCloseBtnWithAnimation];
-
+    [self.deltArea.superview bringSubviewToFront:self.deltArea];
+    
 }
 
 
@@ -360,6 +395,16 @@
     
     CGFloat radis = MIN(frame.size.width , frame.size.height)/2;
     CGPoint origin = CGPointMake(frame.origin.x + radis, frame.origin.y + radis);
+
+    if(self.showDelLocType == DesktopADViewDelLocType_TopRight){
+
+    }else if (self.showDelLocType == DesktopADViewDelLocType_BottomCenter){
+        origin = CGPointMake(frame.origin.x + radis, CGRectGetMaxY(frame)-2 * radis);
+        
+    }
+    
+    
+    
     
     CGFloat startAngle ,endAngle;
     if(frame.size.width > frame.size.height ){
@@ -399,12 +444,22 @@
         deleteStartX = 5;
     }
     
+    CGFloat delt_stand_y = frame.origin.y;
+    if(self.showDelLocType == DesktopADViewDelLocType_TopRight){
+
+    }else if (self.showDelLocType == DesktopADViewDelLocType_BottomCenter){
+        delt_stand_y =  CGRectGetMaxY(frame)-3* radis;
+        
+    }
+    
+    
+    
         
 //    CGPoint centerPoint = origin;
-    CGPoint a = CGPointMake(frame.origin.x + deleteStartX , frame.origin.y + deleteStartX );
-    CGPoint b = CGPointMake(frame.origin.x + 2 *radis - deleteStartX , frame.origin.y + deleteStartX );
-    CGPoint c = CGPointMake(frame.origin.x + deleteStartX ,  frame.origin.y + 2 *radis - deleteStartX );
-    CGPoint d = CGPointMake(frame.origin.x + 2 *radis - deleteStartX ,  frame.origin.y + 2 *radis - deleteStartX );
+    CGPoint a = CGPointMake(frame.origin.x + deleteStartX            , delt_stand_y + deleteStartX );
+    CGPoint b = CGPointMake(frame.origin.x + 2 *radis - deleteStartX , delt_stand_y + deleteStartX );
+    CGPoint c = CGPointMake(frame.origin.x + deleteStartX            , delt_stand_y + 2 *radis - deleteStartX );
+    CGPoint d = CGPointMake(frame.origin.x + 2 *radis - deleteStartX , delt_stand_y + 2 *radis - deleteStartX );
     
     
     UIBezierPath* midPath = UIBezierPath.bezierPath;
@@ -434,15 +489,23 @@
     CGFloat radis = MIN(frame.size.width , frame.size.height)/2;
     
     
-    CGPoint a , b ;
+    CGPoint a   = CGPointZero;
+    CGPoint b  = CGPointZero;
+    
     if(frame.size.width > frame.size.height ){
         a = CGPointMake( frame.origin.x + 2 *radis  , frame.origin.y +  radis );
         b = CGPointMake( CGRectGetMaxX(frame)  , frame.origin.y +  radis );
         
     }else{
+        if(self.showDelLocType == DesktopADViewDelLocType_TopRight){
+           a = CGPointMake( frame.origin.x + radis  , frame.origin.y +  2 *radis );
+           b = CGPointMake( frame.origin.x + radis   , CGRectGetMaxY(frame));
+        }else if (self.showDelLocType == DesktopADViewDelLocType_BottomCenter){
+//           a = CGPointMake( frame.origin.x + radis  , frame.origin.y +  2 *radis );
+//           b = CGPointMake( frame.origin.x + radis   , CGRectGetMaxY(frame));
+           
+        }
         
-        a = CGPointMake( frame.origin.x + radis  , frame.origin.y +  2 *radis );
-        b = CGPointMake( frame.origin.x + radis   , CGRectGetMaxY(frame));
         
     }
     
@@ -482,6 +545,15 @@
     CGFloat deltTop = self.delIconDelt;
     
     CGRect frame = CGRectMake(CGRectGetMaxX(self.adView.frame) - w, CGRectGetMinY(self.adView.frame) - w - deltTop, w,  w + deltTop);
+    if(self.showDelLocType == DesktopADViewDelLocType_TopRight){
+        frame = CGRectMake(CGRectGetMaxX(self.adView.frame) - w, CGRectGetMinY(self.adView.frame) - w - deltTop, w,  w + deltTop);
+    }else if (self.showDelLocType == DesktopADViewDelLocType_BottomCenter){
+        frame = CGRectMake(CGRectGetMinX(self.adView.frame) +(self.adView.frame.size.width-w)/2, CGRectGetMaxY(self.adView.frame),   w,  w + deltTop);
+        
+    }
+    self.deltAreaFrame = frame;
+    self.deltArea.frame = self.deltAreaFrame;
+    
     
     CAShapeLayer *lineLayer2;
     if(_lineLayer2){
