@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "DesktopADView"
-  s.version               = "2.3.2"
+  s.version               = "2.3.3"
   s.summary               = "仿滴滴/Uber 的启动之后再控制器上面弹出多个广告,带删除按钮的动画绘制"
   s.homepage              = "https://github.com/tpctt/DesktopADView"
   s.social_media_url      = "https://github.com/tpctt/DesktopADView"
